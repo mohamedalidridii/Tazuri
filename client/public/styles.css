@@ -155,3 +155,43 @@ select {
 .fs-100 {
     line-height: 1.1;
 }
+
+/* -----------------------*/
+/* Componenets            */
+/* -----------------------*/
+.primary-navigation {
+    --gap: 3rem;
+    --underline-gap: .2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.primary-navigation a {
+    text-decoration:none;
+}
+.underline-indicators > * {
+    padding: var(--underline-gap, 1rem) 0;
+    border-bottom: .2rem solid hsl( var(--clr-dark) / 0 );
+}
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+    border-color: hsl( var(--clr-dark) / .25 );
+}
+.underline-indicators > .active {
+    border-color: hsl( var(--clr-dark) / 1 );
+}
+.btn{
+    width: 8rem;
+    height: 3rem;
+    border: solid hsl( var(--clr-green));
+    background-color: hsl( var(--clr-light));
+    border-radius: 0.18rem;
+    box-shadow: inset 0 0 0 0 hsl( var(--clr-green));
+    transition: ease-out 0.3s;
+    outline: none;
+}
+.btn:hover,
+.btn:focus {
+    box-shadow: inset 8rem 0 0 0 hsl( var(--clr-green));
+    color: hsl( var(--clr-light));
+}
