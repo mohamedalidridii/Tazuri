@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Quicksand&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tazuri | Home</title>
 </head>
-<body class="bg-light">
-    
+<body class="">
+    <header class="primary-header flex">
+        <div>
+            <img src="/client/src/tazuri.png" alt="Tazuri logo" class="logo">
+        </div>
+
+        <button class="mobile-nav-toggle"
+         aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex" style="justify-content: flex-end;">
+                <li class="active">
+                    <a class="text-dark ff-quick fs-200" href="#">Accueil 
+                    </a>
+                <li>
+                    <a class="text-dark ff-quick fs-200" href="#about">Qui sommes nous
+                    </a>
+                <li>
+                    <a class="text-dark ff-quick fs-200" href="#project">Projets
+                    </a>
+                <li>
+                    <a class="text-dark ff-quick fs-200" href ="#contact">Contacts
+                    </a>
+            </ul>
+    </header>
+    <script src="index.js"></script>
 </body>
 </html>
