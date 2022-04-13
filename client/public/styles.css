@@ -9,7 +9,7 @@
 
     /* font-sizes */
     --fs-500: 7.5rem;
-    --fs-400: 6.688rem;
+    --fs-400: 15rem;
     --fs-300: 2rem;
     --fs-200: 1rem;
     --fs-100: 0.875rem ;
@@ -113,7 +113,7 @@ select {
 .container {
     padding-inline:2em;
     margin-inline: auto;
-    max-width: 80rem;
+    max-width: 120rem;
 }
 
 .sr-only {
@@ -269,29 +269,35 @@ select {
     
 }
 .product-container {
+    position: relative;
     padding-inline:2rem;
-    margin-inline: auto;
-    max-width: 80rem;
-    align-items:center;
-    justify-content:space-evenly;
-    
-}
-.product-container > * {
-    flex-basis: 100%;
-    
+    margin-inline: 0;
 }
 .text-container{
     padding-inline: 4em;
-    margin-inline: auto;
+    margin-inline: 0;
     max-width: 70rem;
 }
-.secondary-navigation {
-    padding-block: 2rem;
-    list-style: none;
-    align-items: center;
-    justify-content: center;
+.aleo-vera {
+    text-decoration: none;
 }
-.secondary-navigation a{
-    text-decoration:none;
-    
+.aleo-vera-img {
+    width: 300px;
+    position: absolute;
+    transform: translate(50%, -50%);
+    z-index: 1;
+    display: none;
+}
+#content{
+    padding: 5rem 0 0 0;
+}
+.plante_1 {
+    text-decoration: none;
+}
+.plante_1_img {
+    width: 300px;
+    position: absolute;
+    transform: translate(50%, -50%);
+    z-index: 1;
+    display: none;
 }
