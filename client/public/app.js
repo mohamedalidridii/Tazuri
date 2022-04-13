@@ -7,6 +7,36 @@ const aleoVeraImg= document.querySelector(".aleo-vera-img");
 const plante1= document.querySelector(".plante_1");
 const plante1Img= document.querySelector(".plante_1_img");
 
+let listItems=[...document.querySelectorAll(".product")];
+
+let options={
+    rootMargin:'0%',
+    threshold:1.0
+}
+
+let observer= new IntersectionObserver(showItem, options);
+
+function showItem(entries){
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            let letters = [...entry.target.querySelectorAll('a')];
+            letters.forEach((letter, idx) => {
+                setTimeout(()=>{
+                    letter.classList.add('active');
+                }, idx * 10)
+            })
+            entry.target.children[0].classList.add('active');
+        }
+    })
+}
+
+listItems.forEach(item =>{
+    let newString='';
+    let itemText= item.children[0].innerText.split('');
+    itemText.map(letter => (newString += letter == ' ' ? `<a class='gap'></a>`: `<a class='underline ff-arvo fs-500 text-dark' href='/aleo-vera'>${letter}</a>`))
+    item.innerHTML= newString;
+    observer.observe(item);
+})
 /*Hover Effect */
 window.addEventListener("mousemove", (e)=>{
     let x=e.offsetX;
@@ -15,6 +45,7 @@ window.addEventListener("mousemove", (e)=>{
 if  (e.target.classList.contains("aleo-vera")) {
     aleoVeraImg.style.left= `${x}px`;
     aleoVeraImg.style.top= `${y}px`;
+    
         
 }
 if  (e.target.classList.contains("plante_1")) {

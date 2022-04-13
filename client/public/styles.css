@@ -9,7 +9,7 @@
 
     /* font-sizes */
     --fs-500: 7.5rem;
-    --fs-400: 15rem;
+    --fs-400: 6.33rem;
     --fs-300: 2rem;
     --fs-200: 1rem;
     --fs-100: 0.875rem ;
@@ -58,7 +58,7 @@ body {
     color: hsl( var(--clr-dark));
     background-color: hsl( var(--clr-light));
     line-height: 1.5;
-    min-height: 100vh;
+    min-height: 150vh;
 
     overflow-x: hidden;
 }
@@ -76,18 +76,6 @@ button,
 textarea,
 select {
     font: inherit;
-}
-
-/* remove animations */
-@media (prefers-reduced-motion: reduce) {  
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
 }
 
 /* ----------------*/
@@ -111,9 +99,9 @@ select {
 }
 
 .container {
-    padding-inline:2em;
+    padding-inline:2rem;
     margin-inline: auto;
-    max-width: 120rem;
+    max-width: 100rem;
 }
 
 .sr-only {
@@ -272,11 +260,15 @@ select {
     position: relative;
     padding-inline:2rem;
     margin-inline: 0;
+    margin-block: 17rem;
 }
 .text-container{
-    padding-inline: 4em;
+    position: relative;
+    padding-inline: 2em;
     margin-inline: 0;
-    max-width: 70rem;
+    
+    padding-top: 5rem;
+    text-align: left;
 }
 .aleo-vera {
     text-decoration: none;
@@ -300,4 +292,31 @@ select {
     transform: translate(50%, -50%);
     z-index: 1;
     display: none;
+}
+.products{
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+}
+.product-container ul li {
+    height: 10rem;
+    display: flex;
+    overflow: hidden; 
+    margin-bottom: 0.5rem;
+    justify-content: flex-start;
+}
+.product-container ul li a {
+    display: block;
+    line-height: 10rem;
+    transform: translateY(200%);
+    margin-bottom: 0.5rem;
+
+}
+
+.product-container ul li a.active {
+    transform: translateY(0%);
+    transition: 1s ease-out;
+}
+.underline{
+    text-decoration: none;
 }
