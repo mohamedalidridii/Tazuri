@@ -59,7 +59,6 @@ body {
     background-color: hsl( var(--clr-light));
     line-height: 1.5;
     min-height: 150vh;
-
     overflow-x: hidden;
 }
 
@@ -181,7 +180,6 @@ select {
 @media (min-width: 50em){
     .primary-navigation  {
         --gap: clamp(1.5rem, 5vw, 3rem);
-        padding-block: 1rem;
         padding-inline: clamp(3rem, 10vw, 10rem);
     }
     .primary-header{
@@ -216,7 +214,7 @@ select {
         border: 0;
         aspect-ratio: 1;
         top: 2rem;
-        right: 2rem;
+        right: -12rem;
     }
     .logo{
         margin: 0;
@@ -258,14 +256,14 @@ select {
 }
 .product-container {
     position: relative;
-    padding-inline:2rem;
+    padding-inline:1rem;
     margin-inline: 0;
     margin-block: 17rem;
 }
 .text-container{
     position: relative;
     padding-inline: 2em;
-    margin-inline: 0;
+    margin-right: 20rem;
     
     padding-top: 5rem;
     text-align: left;
@@ -300,9 +298,10 @@ select {
 }
 .product-container ul li {
     height: 10rem;
+    width: 60rem;
     display: flex;
     overflow: hidden; 
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     justify-content: flex-start;
 }
 .product-container ul li a {

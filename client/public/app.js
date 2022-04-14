@@ -7,7 +7,8 @@ const aleoVeraImg= document.querySelector(".aleo-vera-img");
 const plante1= document.querySelector(".plante_1");
 const plante1Img= document.querySelector(".plante_1_img");
 
-let listItems=[...document.querySelectorAll(".product")];
+let listProduct1=[...document.querySelectorAll(".product_1")];
+let listProduct2=[...document.querySelectorAll(".product_2")];
 
 let options={
     rootMargin:'0%',
@@ -30,10 +31,17 @@ function showItem(entries){
     })
 }
 
-listItems.forEach(item =>{
+listProduct1.forEach(item =>{
     let newString='';
     let itemText= item.children[0].innerText.split('');
     itemText.map(letter => (newString += letter == ' ' ? `<a class='gap'></a>`: `<a class='underline ff-arvo fs-500 text-dark' href='/aleo-vera'>${letter}</a>`))
+    item.innerHTML= newString;
+    observer.observe(item);
+})
+listProduct2.forEach(item =>{
+    let newString='';
+    let itemText= item.children[0].innerText.split('');
+    itemText.map(letter => (newString += letter == ' ' ? `<a class='gap'></a>`: `<a class='underline ff-arvo fs-500 text-dark' href='/cactus'>${letter}</a>`))
     item.innerHTML= newString;
     observer.observe(item);
 })
