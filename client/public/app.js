@@ -2,12 +2,13 @@
 /**********************/
 /*Text animation */
 /**********************/
-const aleoVera = document.querySelector(".aleo-vera");
-const aleoVeraImg= document.querySelector(".aleo-vera-img");
-const plante1= document.querySelector(".plante_1");
-const plante1Img= document.querySelector(".plante_1_img");
+const aleoVera = document.querySelector(".plante_1");
+const aleoVeraImg= document.querySelector(".plante_1_img");
+const plante1= document.querySelector(".plante_2");
+const plante1Img= document.querySelector(".plante_2_img");
 
-let listItems=[...document.querySelectorAll(".product")];
+let listPlante_1=[...document.querySelectorAll(".plante_1")];
+let listPlante_2=[...document.querySelectorAll(".plante_2")];
 
 let options={
     rootMargin:'0%',
@@ -30,29 +31,40 @@ function showItem(entries){
     })
 }
 
-listItems.forEach(item =>{
+listPlante_1.forEach(item =>{
     let newString='';
     let itemText= item.children[0].innerText.split('');
-    itemText.map(letter => (newString += letter == ' ' ? `<a class='gap'></a>`: `<a class='underline ff-arvo fs-500 text-dark' href='/aleo-vera'>${letter}</a>`))
+    itemText.map(letter => (newString += letter == ' ' ? `<a class='gap'></a>`: `<a class='plante_1 underline ff-arvo fs-500 text-dark' href='/aleo-vera'>${letter}</a>`))
     item.innerHTML= newString;
     observer.observe(item);
-})
+});
+listPlante_2.forEach(item =>{
+    let newString='';
+    let itemText= item.children[0].innerText.split('');
+    itemText.map(letter => (newString += letter == ' ' ? `<a class='gap'></a>`: `<a class='plante_2 underline ff-arvo fs-500 text-dark' href='/Cactus'>${letter}</a>`))
+    item.innerHTML= newString;
+    observer.observe(item);
+});
+
 /*Hover Effect */
 window.addEventListener("mousemove", (e)=>{
     let x=e.offsetX;
     let y= e.offsetY;
 
-if  (e.target.classList.contains("aleo-vera")) {
-    aleoVeraImg.style.left= `${x}px`;
-    aleoVeraImg.style.top= `${y}px`;
+    if (e.target.classList.contains("plante_1")) {
+        aleoVeraImg.style.left= `${x}px`;
+        aleoVeraImg.style.top= `${y}px`;
+    }
+});
+window.addEventListener("mousemove", (e)=>{
+    let x=e.offsetX;
+    let y= e.offsetY;     
     
+    if (e.target.classList.contains("plante_2")) {
+        plante1Img.style.left= `${x}px`;
+        plante1Img.style.top= `${y}px`;
         
-}
-if  (e.target.classList.contains("plante_1")) {
-    plante1Img.style.left= `${x}px`;
-    plante1Img.style.top= `${y}px`;
-        
-}
+    }
 });
 /*PLante1*/
 plante1.addEventListener("mouseover", () => {

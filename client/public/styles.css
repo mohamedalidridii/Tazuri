@@ -58,7 +58,6 @@ body {
     color: hsl( var(--clr-dark));
     background-color: hsl( var(--clr-light));
     line-height: 1.5;
-    min-height: 150vh;
 
     overflow-x: hidden;
 }
@@ -178,18 +177,12 @@ select {
 .primary-navigation[data-visible="true"] {
     transform: translateX(0%);
 }
-@media (min-width: 50em){
+@media (min-width: 40em){
     .primary-navigation  {
         --gap: clamp(1.5rem, 5vw, 3rem);
         padding-block: 1rem;
         padding-inline: clamp(3rem, 10vw, 10rem);
     }
-    .primary-header{
-        align-items:center;
-        justify-content:space-between;
-        
-    }
-    
 }
 @media (max-width:50em) {
     .primary-navigation{
@@ -270,10 +263,10 @@ select {
     padding-top: 5rem;
     text-align: left;
 }
-.aleo-vera {
+.plante_1 {
     text-decoration: none;
 }
-.aleo-vera-img {
+.plante_1_img {
     width: 300px;
     position: absolute;
     transform: translate(50%, -50%);
@@ -283,10 +276,10 @@ select {
 #content{
     padding: 5rem 0 0 0;
 }
-.plante_1 {
+.plante_2 {
     text-decoration: none;
 }
-.plante_1_img {
+.plante_2_img {
     width: 300px;
     position: absolute;
     transform: translate(50%, -50%);
@@ -303,7 +296,8 @@ select {
     display: flex;
     overflow: hidden; 
     margin-bottom: 0.5rem;
-    justify-content: flex-start;
+    justify-content: flex-start
+    ;
 }
 .product-container ul li a {
     display: block;
@@ -319,4 +313,31 @@ select {
 }
 .underline{
     text-decoration: none;
+}
+.about-container {
+    padding-top:5rem ;
+    position: relative;
+    padding-inline:10rem;
+    margin-inline: auto;
+    max-width: 100rem;
+    max-height: 50rem;
+    justify-content: flex-start;
+    --gap: 1rem;
+
+    
+    
+}
+
+.img_about{
+    display: inline-block;
+    width: auto;
+    height: 30rem;
+
+}
+.text-about{
+    flex-direction: column;
+    --gap: 2rem;
+    justify-items: flex-start;
+
+    
 }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Quicksand&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tazuri | Home</title>
+</head>
+<body class="container">
+    <header class="primary-header flex">
+        <div>
+            <img src="/client/src/tazuri.png" alt="Tazuri logo" class="logo">
+        </div>
+
+        <button class="mobile-nav-toggle"
+         aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex" style="justify-content: flex-end;">
+                <li class="active">
+                    <a class="text-dark ff-quick fs-200" href="#">Accueil 
+                    </a>
+                <li>
+                    <a class="text-dark ff-quick fs-200" href="/Apropos">A propos
+                    </a>
+                <li>
+                    <a class="text-dark ff-quick fs-200" href="/produits">Produits
+                    </a>
+                <li>
+                    <a class="text-dark ff-quick fs-200" href="/blog">blog
+                    </a>
+                <li>
+                    <a class="text-dark ff-quick fs-200" href ="/contact">Contact
+                    </a>
+            </ul>
+    </header>
+    <section id="content" class="grid">
+        <div class="text-container">
+            <h1 class="ff-arvo fs-500 text-dark" style="padding-top: 2rem; line-height: 7rem;">Nos<br>Produits</h1>
+            <p class="ff-source-sans fs-200 text-grey" style="padding-top:1rem ;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            
+            </p>
+        </div>
+        <div class="product-container flex">
+            <ul class="flex products">
+                <li class="product plante_1">
+                    <a class="" href="/aleo-vera">Aleo-vera</a>
+                </li>
+                <li class="product plante_2">
+                    <a class="  ff-arvo fs-500 text-dark" href="/aleo-vera">Cactus</a>
+                </li>
+            </ul>
+            <img class="plante_1_img"src="/client/src/severin-candrian-dgvFsLfIX9E-unsplash.jpg" alt="">
+            <img class="plante_2_img" src="/client/src/plante 1.jpg" alt="">
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
