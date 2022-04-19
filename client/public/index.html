@@ -11,7 +11,7 @@
     <title>Tazuri | Home</title>
 </head>
 <body>
-    <header class="primary-header flex">
+    <header class="container primary-header flex">
         <div>
             <a href="/index.html"><img src="/client/src/tazuri.png" alt="Tazuri logo" class="logo"></a>
         </div>
@@ -39,22 +39,44 @@
                     </a>
             </ul>
     </header>
-    <section id="home">
-        <div>
-
+    <section id="home" >
+        <div class="container">
+            <img src="/client/src/untitled1.png" alt="">
         </div>
-
     </section>
-    <section id="about">
+    <section id="about" class="container">
         <div class="about-container flex">
-            
             <div class="text-about flex">
-            <h1 class="text-dark ff-quick fs-400">Qui sommes nous</h1>
+            <h1 class="text-dark ff-arvo fs-500">Qui sommes <br>nous ?</h1>
             <p class="text-grey ff-source-sans fs-200">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Sed, exercitationem reiciendis dicta at neque quibusdam magnam praesentium voluptatum magni voluptatem veritatis ea. Dolore possimus explicabo eveniet reprehenderit fugit amet atque.</p>
+                <button class="btn text-dark ff-source-sans fs-100" onclick="">Lire la suite</button>
             </div>
             <img class="img_about"src="/client/src/tazuri.png" alt="">
+            
         </div>
+    </section>
+    <section id="produit" class="container grid">
+        <div class="text-container">
+            <h1 class="ff-arvo fs-500 text-dark" style="padding-top: 2rem; line-height: 7rem;">Nos<br>Produits</h1>
+            <p class="ff-source-sans fs-200 text-grey" style="padding-top:1rem ;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+        <div class="product-container flex">
+            <ul class="flex products">
+                <li class="product plante_1">
+                    <a class="" href="/aleo-vera">Aleo-vera</a>
+                </li>
+                <li class="product plante_2">
+                    <a class="  ff-arvo fs-500 text-dark" href="/aleo-vera">Cactus</a>
+                </li>
+            </ul>
+            <img class="plante_1_img"src="/client/src/severin-candrian-dgvFsLfIX9E-unsplash.jpg" alt="">
+            <img class="plante_2_img" src="/client/src/plante 1.jpg" alt="">
+        </div>
+    </section>
     </section>
     <script src="app.js"></script>
 </body>
