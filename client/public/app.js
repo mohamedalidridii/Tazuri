@@ -82,30 +82,35 @@ aleoVera.addEventListener("mouseleave", () => {
 });
 
 /********Menu*****************/
-const primaryNav = document.querySelector(".primary-navigation");
-const navToggle = document.querySelector(".mobile-nav-toggle");
+let icon = document.querySelector('#icon')
+let links = document.querySelector('.links')
 
-navToggle.addEventListener('click', () => {
-    const visibility = primaryNav.getAttribute("data-visible");
+icon.addEventListener('click',()=>{
+  icon.classList.toggle('active')
+  links.classList.toggle('active')
+})
 
-    if (visibility=== "false") {
-        primaryNav.setAttribute("data-visible", true);
-        navToggle.setAttribute("aria-expanded", true);
-    }else{
-        primaryNav.setAttribute("data-visible", false);
-        navToggle.setAttribute("aria-expanded", false);
-    }
+//  click anyware outside  menu and toggle button
+document.addEventListener("click", (e) => {
+  if (e.target !== icon) {
+      if (icon.classList.contains("active") && links.classList.contains("active")) {
+        icon.classList.remove("active");
+        links.classList.remove("active");
+      }
+  }
 });
+
+
 const canvas = document.querySelector('.animation-scrolling');
 const context = canvas.getContext('2d');
 const html = document.documentElement;
 const currentFrame = index => (
-    `/client/src/images/Render0001-0120_1${index.toString().padStart(3, '0')}.jpg`
+    `/client/src/images/Render0001-0070_2${index.toString().padStart(2, '0')}.jpg`
 )
 
-const frameCount = 120;
-canvas.height = 1080;
-canvas.width =  1920;
+const frameCount = 70;
+canvas.height = 2160;
+canvas.width =  3840;
 const img= new Image();
 img.src=currentFrame(0);
 img.onload = function(){
@@ -124,11 +129,13 @@ window.addEventListener('scroll', () =>{
     const frameIndex = Math.min(frameCount -1, Math.floor(scrollFraction * frameCount));
 
     requestAnimationFrame(()=> updateImage(frameIndex))
-})
-const preloadImages =() => {
+});
+
+const preloadImages = () => {
     for (let i=1; i < frameCount; i++) {
         const img = new Image()
         img.src = currentFrame(i);
     }
 };
-preloadImages
+
+preloadImages();

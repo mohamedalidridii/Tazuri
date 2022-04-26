@@ -11,7 +11,7 @@
     <title>Tazuri | Home</title>
 </head>
 <body>
-    <header class="container primary-header flex">
+    <!-- <header class="primary-header flex">
         <div>
             <a href="/index.html"><img src="/client/src/tazuri.png" alt="Tazuri logo" class="logo"></a>
         </div>
@@ -21,7 +21,7 @@
             <span class="sr-only">Menu</span>
         </button>
         <nav>
-            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex" style="justify-content: flex-end;">
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
                 <li class="active">
                     <a class="text-dark ff-quick fs-200" href="#">Accueil 
                     </a>
@@ -38,21 +38,48 @@
                     <a class="text-dark ff-quick fs-200" href ="/contact.html">Contact
                     </a>
             </ul>
-    </header>
+    </header> -->
+    <header>
+        <div class="container flex">
+            <div>
+                <a href="/index.html"><img src="/client/src/tazuri.png" alt="Tazuri logo" class="logo"></a>
+            </div>
+          <div class="links">
+            <ul class="flex">
+                <li class="active">
+                    <a class="text-dark ff-quick fs-200" href="#">Accueil 
+                    </a>
+                <li>
+                    <a class="text-dark ff-quick fs-200" href="/Apropos.html">A propos
+                    </a>
+                <li>
+                    <a class="text-dark ff-quick fs-200" href="/produits.html">Produits
+                    </a>
+                <li>
+                    <a class="text-dark ff-quick fs-200" href="/blog.html">blog
+                    </a>
+                <li>
+                    <a class="text-dark ff-quick fs-200" href ="/contact.html">Contact
+                    </a>
+            </ul>
+          </div>
+          <div class="icon" id="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </header>
     <section id="home">
         <canvas class="animation-scrolling"></canvas>
     </section>
     <section id="about" class="container">
-        <div class="about-container flex">
-            <div class="text-about flex">
-            <h1 class="text-dark ff-arvo fs-500">Qui sommes <br>nous ?</h1>
-            <p class="text-grey ff-source-sans fs-200">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <div class="about-container">
+            <img src="/client/src/tazuri.png" alt="Tazuri" class="logo-about">
+            <p class="text_about text-grey ff-source-sans fs-200">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Sed, exercitationem reiciendis dicta at neque quibusdam magnam praesentium voluptatum magni voluptatem veritatis ea. Dolore possimus explicabo eveniet reprehenderit fugit amet atque.</p>
-                <button class="btn text-dark ff-source-sans fs-100" onclick="">Lire la suite</button>
+                <button class="button-about btn text-dark ff-source-sans fs-100" onclick="">Lire la suite</button>
             </div>
-            <img class="img_about"src="/client/src/tazuri.png" alt="">
-            
-        </div>
     </section>
     <section id="produit" class="container grid">
         <div class="text-container">
@@ -76,6 +103,7 @@
         </div>
     </section>
     </section>
+    
     <script src="app.js"></script>
 </body>
 </html>
