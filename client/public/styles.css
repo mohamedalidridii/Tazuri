@@ -184,6 +184,7 @@ select {
   
   /* start header */
   header{
+      z-index: 2;
     padding: 2rem;
     box-shadow: -1px 3px 23px -8px rgba(0,0,0,0.84);
     -webkit-box-shadow: -1px 3px 23px -8px rgba(0,0,0,0.84);
@@ -195,16 +196,17 @@ select {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-basis: 1;
   }
   .logo{
       position: absolute;
-      width: 15vw;
+      width: 15rem;
       top: -5vh;
   }
   
   header .container .links ul{
     display: flex;
-    --gap: 5rem;
+    --gap: 5vw;
   }
   
   
@@ -237,7 +239,7 @@ select {
   }
   
   
-  @media (max-width: 40em) { 
+  @media (max-width: 60em) { 
     header .container .links{
       background-color: hsl( var(--clr-light));
       position: absolute;
@@ -259,6 +261,7 @@ select {
       flex-direction: column;
       height: 50%;
       justify-content: space-between;
+      
     }
     header .container .icon{
       display: block;
@@ -279,15 +282,19 @@ select {
         position: relative;
         width: 30vw;
         top: 0;
-        left: -15vw
+        left: -15vw;
+        
+    }
+    .animation-scrolling{
+        display: none;
     }
    }
   /* end header */
   
 
 .btn{
-    width: 8rem;
-    height: 3rem;
+    width: 5rem;
+    height: 2rem;
     border: solid hsl( var(--clr-green));
     background-color: hsl( var(--clr-light));
     border-radius: 0.18rem;
@@ -371,6 +378,16 @@ select {
     --gap: 5rem;
 
 }
+.header {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.2s ease-out;
+  }
+  
+  .headerVisible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 .img_about{
     display: inline-block;
     position: relative;
