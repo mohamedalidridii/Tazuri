@@ -8,37 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Quicksand&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <title>Tazuri | Home</title>
 </head>
+    <div class="loader"></div>
 <body>
-    <!-- <header class="primary-header flex">
-        <div>
-            <a href="/index.html"><img src="/client/src/tazuri.png" alt="Tazuri logo" class="logo"></a>
-        </div>
-
-        <button class="mobile-nav-toggle"
-         aria-controls="primary-navigation" aria-expanded="false">
-            <span class="sr-only">Menu</span>
-        </button>
-        <nav>
-            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
-                <li class="active">
-                    <a class="text-dark ff-quick fs-200" href="#">Accueil 
-                    </a>
-                <li>
-                    <a class="text-dark ff-quick fs-200" href="/Apropos.html">A propos
-                    </a>
-                <li>
-                    <a class="text-dark ff-quick fs-200" href="/produits.html">Produits
-                    </a>
-                <li>
-                    <a class="text-dark ff-quick fs-200" href="/blog.html">blog
-                    </a>
-                <li>
-                    <a class="text-dark ff-quick fs-200" href ="/contact.html">Contact
-                    </a>
-            </ul>
-    </header> -->
+    <div class="content"> 
     <header>
         <div class="container flex">
             <div>
@@ -86,29 +61,19 @@
                 <button class="button-about btn text-dark ff-source-sans fs-100" onclick="">Lire la suite</button>
             </div>
     </section>
-    <section id="produit" class="container grid">
-        <div class="text-container header">
-            <h1 class="ff-arvo fs-500 text-dark" style="padding-top: 2rem; line-height: 7rem;">Nos<br>Produits</h1>
-            <p class="ff-source-sans fs-200 text-grey" style="padding-top:1rem ;">
+    <section id="produit" class="container">
+        <div class="about-container header">
+            
+            <h1 class="ff-arvo fs-500 text-dark" >Nos<br>Produits</h1>
+            <p class="ff-source-sans fs-200 text-grey text_about">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
+            <button class="button-about btn text-dark ff-source-sans fs-100" onclick="">Lire la suite</button>
         </div>
-        <div class="product-container flex">
-            <ul class="flex products">
-                <li class="product plante_1">
-                    <a class="" href="/aleo-vera">Aleo-vera</a>
-                </li>
-                <li class="product plante_2">
-                    <a class="  ff-arvo fs-500 text-dark" href="/aleo-vera">Cactus</a>
-                </li>
-            </ul>
-            <img class="plante_1_img"src="/client/src/severin-candrian-dgvFsLfIX9E-unsplash.jpg" alt="">
-            <img class="plante_2_img" src="/client/src/plante 1.jpg" alt="">
-        </div>
-    </section>
     </section>
     
     <script src="app.js"></script>
+</div>
 </body>
 </html>

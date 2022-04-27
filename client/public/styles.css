@@ -165,6 +165,14 @@ select {
     top: 21rem;
     left: 2rem;
 }
+#produit .about-container .button-about {
+  position: relative;
+  top: 2rem;
+  left: 0rem;
+}
+#produit .about-container h1{
+  line-height: 6rem;
+}
 
 /* NavBar */
 
@@ -310,7 +318,7 @@ select {
   }
   .text_about {
     position: relative;
-    top:0;
+    top:-5rem;
     padding: 0;
   }
   .btn{
@@ -330,8 +338,8 @@ select {
   .button-about {
     position: relative;
 
-    top: 2rem;
-    left: 0;
+    top: -4rem;
+    left: 6rem;
 }
 }
   /* end header */
@@ -360,6 +368,18 @@ select {
     transform: rotate(45deg);
     margin: -10px;
     animation: animate 2s infinite;
+}
+.loader{
+  height: 10px;
+  background-color: hsl( var(--clr-dark));
+  position: absolute;
+}
+
+.content{
+
+  height: 100vh;
+  width: 100%;
+  display: none;
 }
 @keyframes animate
 {
@@ -402,6 +422,8 @@ select {
     margin-inline: 0;
 }
 .text-container{
+  margin: 0;
+  padding-block: 0;
     position: relative;
     padding-inline: 2em;
     margin-inline: 0;
@@ -483,17 +505,20 @@ select {
     top: 6rem;
 
 }
-.text-about{
-    flex-direction: column;
-    --gap: 2rem;
-    justify-items: flex-start;
-    padding-inline: 2rem ;   
-}
+
 #home{
     min-height: 150vh;
 }
 #about{
-    min-height: 100vh;
+    min-height: 150vh;
+}
+#produit{
+    min-height: 70vh;
+}
+#produit .about-container .text_about{
+  position: relative;
+  top: 0rem;
+  padding: 2rem min(30vw, 25rem) 0 0;
 }
 canvas {
     position:fixed;
