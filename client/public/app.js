@@ -99,7 +99,7 @@ document.addEventListener("click", (e) => {
       }
   }
 });
-// Animation Text for Landing page
+// Landing page Animation
 function checkForVisibility() {
     let headers = document.querySelectorAll(".header");
     headers.forEach(function(header) {
@@ -110,6 +110,7 @@ function checkForVisibility() {
       }
     });
   }
+  
   function isElementInViewport(el) {
     var rect = el.getBoundingClientRect();
   
