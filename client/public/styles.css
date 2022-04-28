@@ -1,3 +1,4 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 /* ----------------*/
 /*Custom properties*/
 /* ----------------*/
@@ -377,9 +378,79 @@ select {
 
 .content{
 
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: none;
+}
+footer{
+  min-height: 7vh;
+}
+.footer{
+  justify-content:space-evenly;
+  
+  text-align: center;
+  --gap: 0.001em;
+  padding-block:2rem ;
+}
+.footer ul {
+    padding:0;
+    list-style: none;
+}
+.footer-social-icons {
+    width: 350px;
+    margin: 0;
+    padding: 0;
+}
+.social-icon {
+    color: hsl( var(--clr-dark));
+}
+ul.social-icons {
+    margin-top: -5px;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-linkedin {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+.fa-instagram {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-instagram:hover {
+    background-color: #C13584;
 }
 @keyframes animate
 {
@@ -507,13 +578,13 @@ select {
 }
 
 #home{
-    min-height: 150vh;
+    min-height: 200vh;
 }
 #about{
-    min-height: 150vh;
+    min-height: 100vh;
 }
 #produit{
-    min-height: 70vh;
+    min-height: 50vh;
 }
 #produit .about-container .text_about{
   position: relative;

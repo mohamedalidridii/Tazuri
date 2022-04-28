@@ -53,7 +53,7 @@ const canvas = document.querySelector('.animation-scrolling');
 const context = canvas.getContext('2d');
 const html = document.documentElement;
 const currentFrame = index => (
-    `/client/src/images/Render0001-0070_2${index.toString().padStart(2, '0')}.jpg`
+    `/client/src/animation/Render0001-007${index.toString().padStart(3, '0')}.jpg`
 )
 
 const frameCount = 70;
