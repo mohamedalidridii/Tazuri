@@ -7,46 +7,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Quicksand&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Tazuri | Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <title>Produit</title>
 </head>
-<body class="container">
-    <header class="primary-header flex">
-        <div>
-            <img src="/client/src/tazuri.png" alt="Tazuri logo" class="logo">
-        </div>
-
-        <button class="mobile-nav-toggle"
-         aria-controls="primary-navigation" aria-expanded="false">
-            <span class="sr-only">Menu</span>
-        </button>
-        <nav>
-            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex" style="justify-content: flex-end;">
+<body>
+    <header>
+        <div class="container flex">
+            <div>
+                <a href="#"><img src="/client/src/tazuri.png" alt="Tazuri logo" class="logo"></a>
+            </div>
+          <div class="links">
+            <ul class="flex">
+                <li >
+                    <a class="text-dark ff-quick fs-200" href="index.html">Accueil 
+                    </a>
+                <li>
+                    <a class="text-dark ff-quick fs-200" href="#about">A propos
+                    </a>
+                <li>
+                    <a class="text-dark ff-quick fs-200" href="produits.html">Produits
+                    </a>
                 <li class="active">
-                    <a class="text-dark ff-quick fs-200" href="#">Accueil 
+                    <a class="text-dark ff-quick fs-200" href="blog.html">blog
                     </a>
                 <li>
-                    <a class="text-dark ff-quick fs-200" href="/Apropos">A propos
-                    </a>
-                <li>
-                    <a class="text-dark ff-quick fs-200" href="/produits">Produits
-                    </a>
-                <li>
-                    <a class="text-dark ff-quick fs-200" href="/blog">blog
-                    </a>
-                <li>
-                    <a class="text-dark ff-quick fs-200" href ="/contact">Contact
+                    <a class="text-dark ff-quick fs-200" href ="contact.html">Contact
                     </a>
             </ul>
+          </div>
+          <div class="icon" id="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
     </header>
-    <section id="content" class="grid">
-        <div class="text-container">
-            <h1 class="ff-arvo fs-500 text-dark" style="padding-top: 2rem; line-height: 7rem;">Nos<br>Produits</h1>
-            <p class="ff-source-sans fs-200 text-grey" style="padding-top:1rem ;">
+    <section id="produit-page" class="container">
+        <div class="produit-container">
+            <h1 class="ff-arvo fs-500 text-dark" >Nos<br>Produits</h1>
+            <p class="ff-source-sans fs-200 text-grey text_about">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            
             </p>
+    
         </div>
         <div class="product-container flex">
             <ul class="flex products">
@@ -61,7 +68,20 @@
             <img class="plante_2_img" src="/client/src/plante 1.jpg" alt="">
         </div>
     </section>
-    <script src="app.js"></script>
     <script src="anime.js"></script>
+    <script src="app.js"></script>
+    <footer>
+        <div class="footer grid">
+        <div class="footer-social-icons">
+
+            <ul class="social-icons">
+                <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                <li><a href="" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <h4 class="ff-source-sans fs-200 text-dark">Copyright © 2022 All Rights Reserved by Tazuri.</h4>
+    </div>
+    </footer>
 </body>
 </html>

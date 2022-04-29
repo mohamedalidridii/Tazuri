@@ -88,6 +88,9 @@ const preloadImages = () => {
 
 preloadImages();
 
+
+
+
 function loaderSpinner() {
   $(window).load(function() {
       var loader = $('.loader');
@@ -122,7 +125,7 @@ if(i === 402){
       $('.content').fadeIn("slow");
       (loader).fadeOut("fast");
       /*Set time in milisec */
-    },3500);
+    },2800);
   });
 
 }
