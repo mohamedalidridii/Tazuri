@@ -1,4 +1,3 @@
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 /* ----------------*/
 /*Custom properties*/
 /* ----------------*/
@@ -45,7 +44,9 @@ figure,
 picture {
     margin: 0;
 }
-
+.text-footer{
+  text-align: center;
+}
 h1,
 h2,
 h3,
@@ -177,7 +178,14 @@ select {
 #produit .about-container h1{
   line-height: 6rem;
 }
-
+#contact .about-container .button-about {
+  position: relative;
+  top: 2rem;
+  left: 0rem;
+}
+#contact .about-container h1{
+  line-height: 6rem;
+}
 /* NavBar */
 
 
@@ -403,26 +411,35 @@ footer{
   
 }
 .footer{
-  justify-content:space-evenly;
+  justify-content:flex-start;
   align-items: center ;
-  text-align: center;
+  
   --gap: 0.001em;
-  padding-block:1rem ;
+  padding-block:2rem ;
 }
 .footer ul {
     padding:0;
     list-style: none;
 }
 .footer-social-icons {
-    width: 350px;
+    position: relative;
+    
+    width: 15rem;
     margin: 0;
     padding: 0;
+}
+.footer-social-icons {
+  position: relative;
+  
+  width: 15rem;
+  margin: 0;
+  padding: 0;
 }
 .social-icon {
     color: hsl( var(--clr-dark));
 }
 ul.social-icons {
-    margin-top: -5px;
+    margin-top: 0;
 }
 .social-icons li {
     vertical-align: top;
@@ -434,6 +451,7 @@ ul.social-icons {
     text-decoration: none;
 }
 .fa-facebook {
+    
     padding:10px 14px;
     -o-transition:.5s;
     -ms-transition:.5s;
@@ -509,6 +527,10 @@ ul.social-icons {
     padding-inline:2rem;
     margin-inline: 0;
 }
+.text-contact{
+  position: relative;
+  top: 0.1rem;
+}
 .text-container{
   margin-block: 10rem;
   padding-block: 5rem;
@@ -572,7 +594,7 @@ ul.social-icons {
     max-width: 100rem;
     max-height: auto;
     justify-content: center;
-    --gap: 5rem;
+    --gap: 1rem;
 
 }
 .header {
@@ -615,6 +637,10 @@ ul.social-icons {
     min-height: 55vh;
     padding: 0 0 0 min(8vw, 25rem);
 }
+#contact{
+  min-height: 75vh;
+  padding: 5rem 0 0 min(8vw, 25rem);
+}
 #produit-page{
   min-height: 500vh;
 }
@@ -633,6 +659,11 @@ ul.social-icons {
   padding: 2rem min(10vw, 25rem) 0 0;
 }
 #produit .about-container .text_about{
+  position: relative;
+  top: 0rem;
+  padding: 2rem min(30vw, 25rem) 0 0;
+}
+#contact .about-container .text_about{
   position: relative;
   top: 0rem;
   padding: 2rem min(30vw, 25rem) 0 0;
