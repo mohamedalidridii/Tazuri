@@ -1,0 +1,106 @@
+:root {
+  --background-black: hsl(207, 19%, 9%); 
+  --text-white: hsl(0, 0%, 100%); 
+  --lime-green: hsl(142, 90%, 61%); 
+}
+
+/** By default, the width and height of an element is calculated like this: 
+width/height + padding + border = actual width/height of an element. 
+
+With box-sizing: border-box, you are able to take into account the padding and border of an element, so element boxes can be of equal value even when you specify a different padding into one of them. **/
+::before, 
+::after {
+  box-sizing: border-box; 
+}
+
+body {
+  display: grid; 
+  min-height: 100vh; 
+  place-items: center; 
+  line-height: 1.6; 
+  background: var(--background-black); 
+  font-family: sans-serif; 
+}
+
+.card {
+  color: var(--text-white); 
+  background-image: url("https://www.hdfstutorial.com/wp-content/uploads/2020/12/image-12.png"); 
+  /** background-size property sets the size of the element's background image. The value of cover scales the image, while preserving its ratio, to the smalleset possible size to fill the container. **/
+  /**background-size: cover; **/
+  padding: 10rem 0 0; 
+  max-width: 35ch; 
+  border-radius: 1rem; 
+  overflow: hidden; 
+  outline: 1px solid black; 
+  transition: transform 500ms ease; 
+}
+
+.card:hover {
+  transform: scale(1.05); 
+}
+
+.card-content {
+  --padding: 1.5rem; 
+  padding: var(--padding); 
+  /** hue and saturation values do not matter here because, the 'lightness' value is set at 0. the / 1 is the opacity value, 1 being not see through
+  For linear-gradients, you can have multiple seperated by commas, the 10% indicates where in the card the matching color notation ability starts**/
+  background: linear-gradient(hsl(0 0% 0% / 0),
+  hsl(0 0% 0% / 0.3) 10%,
+  hsl(0 0% 0% / 1)); 
+  transform: translateY(69%);
+  transition: transform 500ms ease; 
+}
+
+.card:hover .card-content {
+  transform: translateY(0%); 
+  transition-delay: 500ms; 
+}
+
+.card-content > *:not(.card-title) {
+  opacity: 0; 
+  transition: opacity 500ms linear; 
+}
+
+.card:hover .card-content > * {
+  opacity: 1; 
+  transition-delay: 1000ms; 
+}
+
+/** card-title **/
+
+.card-title {
+  position: relative; 
+  width: max-content; 
+}
+
+.card-title::after {
+  content: ""; 
+  position: absolute; 
+  height: 3px;
+  left: calc(var(--padding) * -1); 
+  bottom: 0; 
+  width: calc(100% + var(--padding)); 
+  background: var(--lime-green); 
+  transform: scaleX(0); 
+  transition: transform 500ms ease; 
+  transform-origin: left; 
+}
+
+.card:hover .card-title::after {
+  transform: scaleX(1);  
+}
+
+.button-projects {
+  cursor: pointer; 
+  display: inline-block; 
+  text-decoration: none; 
+  color: var(--background-black);
+  background-color: var(--lime-green); 
+  padding: 0.5em 1.25em;
+  border-radius: 2.5em; 
+}
+
+.button-projects:hover,
+.button-projects:focus {
+  background-color: var(--text-white); 
+}

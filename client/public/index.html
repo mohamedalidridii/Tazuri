@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <title>Tazuri | Home</title>
 </head>
@@ -51,20 +52,22 @@
       </header>
     <section id="home">
         <canvas class="animation-scrolling"></canvas>
-        <div class="scroll-down">
-            <span></span>
-            <span></span>
-            <span></span>
-         </div>
-        <h1 class=" text-home header ff-arvo fs-300 text-dark">
-            When life gives you 
-            <span class="ff-kaushan fs-500 text-dark">
-                plants,</span>
-            <br> 
-            make a 
-            <span class="ff-kaushan fs-500 text-dark">
-                Jungle.
-            </span></h1>
+        <div class="scroll-down flex">
+            <h1 class=" text-home header ff-arvo fs-300 text-dark">
+                When life gives you 
+                <span class="ff-kaushan fs-500 text-dark">
+                    plants,</span>
+                <br> 
+                make a 
+                <span class="ff-kaushan fs-500 text-dark">
+                    Jungle.
+                </span></h1>
+        <span class="mouse">
+        <span class="mouse-wheel"></span>
+        </span>
+        
+        </div>
+        
     </section>
     <section id="about" class="container">
         <div class="about-container header">
@@ -88,27 +91,33 @@
         <div class="about-container header">
             
             <h1 class="ff-arvo fs-500 text-dark" >Contact</h1>
-            <p class="ff-source-sans fs-200 text-grey text_about">Pour plus d'informations sur nos porduits vous pouvez nous contacter sur:
-                <div class="footer grid">
-                    
-                    <div class="footer-social-icons">
-                        <ul class="social-icons">
-                            <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-                            <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
-                        </ul>ou sur notre E-mail:<br>
+            <p class="ff-source-sans fs-200 text-grey text_about">Pour plus d'informations sur nos porduits 
+                vous pouvez nous contacter sur:
+                <div class="grid ff-source-sans fs-100">
+                    <ul class="wrapper flex">
+                        <li class="social-icon flex facebook">
+                            
+                            <span><i class="fab fa-facebook-f"></i></span>
+                        </li>
+                        <li class="social-icon flex instagram">
+                            <span><i class="fab fa-instagram"></i></span>
+                        </li>
+                    </ul>
+                </div>
+                    ou sur notre E-mail:
                         <h4 class=" text-contact ff-source-sans fs-300 text-dark">contact@tazuri.net</h4>
                     </div>
                     
-                </div>
+                
             </p>
             <!-- <button class="button-about btn text-dark ff-source-sans fs-100" onclick="">Lire la suite</button> -->
+            <footer>
+                <h4 class=" text-footer ff-source-sans fs-100 text-dark">Copyright © 2022 All Rights Reserved by Tazuri.</h4>
+            </div>
+            </footer>
         </div>
     </section>
-    <footer>
-        <h4 class=" text-footer ff-source-sans fs-100 text-dark">Copyright © 2022 All Rights Reserved by Tazuri.</h4>
-    </div>
-    </footer>
+
     <script src="app.js"></script>
 </div>
 </body>
