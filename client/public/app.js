@@ -131,3 +131,7 @@ if(i === 402){
 }
 
 loaderSpinner();
+
+document.addEventListener('scroll', function(e) {
+  document.getElementById('mouse-scroll').classList.add('mous-scroll--hidden');
+});

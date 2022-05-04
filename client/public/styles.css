@@ -371,44 +371,74 @@ select {
 }
 }
   /* end header */
-  .mouse {
-    width: 25px;
-    height: 50px;
-    border: 2px solid hsl( var(--clr-grey));
-    border-radius: 20px;
+  #mouse-scroll {
+    position: fixed;
+    margin: auto;
+    left: 50%;
+    bottom: 50px;
+    -webkit-transform: translateX(-50%);
+    z-index: 9999;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  #mouse-scroll .mouse {
+    height: 60px;
+    width: 35px;
+    border-radius: 30px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    border: 2px solid hsl( var(--clr-grey));
+  }
+  #mouse-scroll .mouse-in {
+    height: 8px;
+    width: 8px;
+    display: block; 
+    margin: 15px auto;
+    background: hsl( var(--clr-grey));
+    position: relative;
+    border-radius: 8px;
+  }
+  #mouse-scroll .mouse-in {
+   -webkit-animation: animated-mouse 1.2s ease infinite;
+    moz-animation: mouse-animated 1.2s ease infinite;
   }
   
-  .mouse-wheel{
-    display: block;
-    width: 10px;
-    height: 10px;
-    background-color: hsl( var(--clr-grey));
-    border-radius: 50%;
-    margin: auto;
-    animation: move-wheel 1.5s 
-      linear infinite;
-  }
-  @keyframes move-wheel {
-    0%{
-      opacity: 0;
-      transform: translateY(-1rem);
-    }
-    100%{
+  @-webkit-keyframes animated-mouse {
+    0% {
       opacity: 1;
-      transform: translateY(1rem);
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+    100% {
+       opacity: 0;
+      -webkit-transform: translateY(18px);
+      -ms-transform: translateY(18px);
+      transform: translateY(18px);
     }
   }
-.scroll-down{
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  --gap:1rem;
-}
+  
+  #mouse-scroll small {
+    font-size: 1rem;
+    color: white;
+  }
+  
+  .mous-scroll--hidden {
+    opacity: 0;
+    -webkit-animation: scroll-mouse-fade-out 1.2s ease;
+  }
+  
+  @-webkit-keyframes scroll-mouse-fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+       opacity: 0;
+    }
+  }
 .loader{
   height: 10px;
   background-color: hsl( var(--clr-dark));
@@ -546,10 +576,11 @@ footer{
 #home .fs-300{font-size: 3rem}
 .text-home{
   width: 100%;
-  padding: 35vh 0 0 6rem;
+  padding: 35vh 0 0 12rem;
   position: relative;
   text-align:center;
   line-height:1;
+  text-align: center;
 }
 
 #about{
