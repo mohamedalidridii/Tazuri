@@ -1,81 +1,68 @@
-/**********************/
-/*Text animation */
-/**********************/
-const aleoVera = document.querySelector(".plante_1");
-const aleoVeraImg= document.querySelector(".plante_1_img");
-const plante1= document.querySelector(".plante_2");
-const plante1Img= document.querySelector(".plante_2_img");
+const scrollable = document.querySelector('.scrollable');
+const stickyProductFirst = document.querySelector('.product-1');
+const stickyProductSecond = document.querySelector('.product-2')
+const stickyTitle = document.querySelector('.product-text')
+let images = [...document.querySelectorAll('.img-prod')];
+let current= 0;
+let target  = 0;
+const ease = 0.8;
 
-let listPlante_1=[...document.querySelectorAll(".plante_1")];
-let listPlante_2=[...document.querySelectorAll(".plante_2")];
-
-let options={
-    rootMargin:'0%',
-    threshold:1.0
+function lerp(start, end, t){
+    return start * (1 - t) + end + t;
 }
 
-let observer= new IntersectionObserver(showItem, options);
+function init(){
+    document.body.style.height = `${scrollable.getBoundingClientRect().height}px`
+}
+function smoothScroll(){
+    target = window.scrollY;
+    current = lerp(current, target, ease);
+    scrollable.style.transform = `translate3d(0, ${-current}px, 0)`;
+    stickyOne();
+    animateImages();
+    window.requestAnimationFrame(smoothScroll);
+}
 
-function showItem(entries){
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            let letters = [...entry.target.querySelectorAll('a')];
-            letters.forEach((letter, idx) => {
-                setTimeout(()=>{
-                    letter.classList.add('active');
-                }, idx * 10)
-            })
-            entry.target.children[0].classList.add('active');
+function stickyOne(){
+    let offset = window.innerHeight
+
+    if(current <= (offset)){
+        stickyTitle.style.transform = `translate3d(0, ${current - offset}px, 0)`
+    }
+    if(current > offset){
+        stickyTitle.style.transform = `translate3d(0, ${offset}px/2, 0)`
+    }
+    if(current < offset * 2){
+        stickyProductFirst.style.transform = `translate3d(0, 0, 0)`
+    }
+    if(current >= (offset * 2) && current <= (offset * 4)){
+        stickyProductFirst.style.transform = `translate3d(0, ${current - offset * 2}px, 0)`
+    }
+    if(current > offset * 4){
+        stickyProductFirst.style.transform = `translate3d(0, ${offset* 2}px, 0)`
+    }
+    if(current >= offset * 4 && current <= offset * 6){
+            stickyProductSecond.style.transform = `translate3d(0, 0, 0)`
+    }
+    if(current >= offset * 6 && current <= offset * 8){
+                stickyProductSecond.style.transform = `translate3d(0, ${(current) - (offset * 6)}px, 0)`
+    }
+    if(current > offset * 8){
+                stickyProductSecond.style.transform = `translate3d(0, ${offset * 2}px, 0)`
+            }
+}
+
+function animateImages(){
+    for(let i = 0; i < images.length; i++){
+        let { top } = images[i].getBoundingClientRect();
+        if (i % 2 == 0){
+            images[i].style.transform = `rotate(${top * 0.05}deg )`;
         }
-    })
+        else{
+        images[i].style.transform = `rotate(${top * 0.05 * -1}deg )`;
+        }
+    }
 }
-
-listPlante_1.forEach(item =>{
-    let newString='';
-    let itemText= item.children[0].innerText.split('');
-    itemText.map(letter => (newString += letter == ' ' ? `<a class='gap'></a>`: `<a class='plante_1 underline ff-arvo fs-500 text-dark' href='/aleo-vera'>${letter}</a>`))
-    item.innerHTML= newString;
-    observer.observe(item);
-});
-listPlante_2.forEach(item =>{
-    let newString='';
-    let itemText= item.children[0].innerText.split('');
-    itemText.map(letter => (newString += letter == ' ' ? `<a class='gap'></a>`: `<a class='plante_2 underline ff-arvo fs-500 text-dark' href='/Cactus'>${letter}</a>`))
-    item.innerHTML= newString;
-    observer.observe(item);
-});
-
-/*Hover Effect */
-window.addEventListener("mousemove", (e)=>{
-    let x=e.offsetX;
-    let y= e.offsetY;
-
-    if (e.target.classList.contains("plante_1")) {
-        aleoVeraImg.style.left= `${x}px`;
-        aleoVeraImg.style.top= `${y}px`;
-    }
-});
-window.addEventListener("mousemove", (e)=>{
-    let x=e.offsetX;
-    let y= e.offsetY;     
-    
-    if (e.target.classList.contains("plante_2")) {
-        plante1Img.style.left= `${x}px`;
-        plante1Img.style.top= `${y}px`;
-        
-    }
-});
-/*PLante1*/
-plante1.addEventListener("mouseover", () => {
-    plante1Img.style.display="block";
-});
-plante1.addEventListener("mouseleave", () => {
-    plante1Img.style.display="";
-});
-/*Aleo-Vera*/
-aleoVera.addEventListener("mouseover", () => {
-    aleoVeraImg.style.display="block";
-});
-aleoVera.addEventListener("mouseleave", () => {
-    aleoVeraImg.style.display="";
-});
+init();
+smoothScroll();
+console.log(current);

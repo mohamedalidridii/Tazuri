@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="product-page">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,74 +14,101 @@
     <title>Produits</title>
 </head>
 <body>
-    <header>
-        <div class="container flex">
-            <div>
-                <a href="#"><img src="/client/src/tazuri.png" alt="Tazuri logo" class="logo"></a>
+    <section id="products">
+        
+        <header>
+            <div class="container flex">
+                <div>
+                    <a href="#"><img src="/client/src/tazuri.png" alt="Tazuri logo" class="logo"></a>
+                </div>
+              <div class="links">
+                <ul class="flex">
+                    <li class="active">
+                        <a class="text-dark ff-source-sans fs-300" href="index.html">Accueil 
+                        </a>
+                    <li>
+                        <a class="text-dark ff-source-sans fs-300" href="index.html">A propos
+                        </a>
+                    <li>
+                        <a class="text-dark ff-source-sans fs-300" href="produits.html">Produits
+                        </a>
+                    <li>
+                        <a class="text-dark ff-source-sans fs-300" href ="projects.html">Projets
+                        </a>
+                    <li>
+                        <a class="blog ff-source-sans fs-300" href="blog.html">blog
+                        </a>
+                </ul>
+              </div>
+              <div class="icon" id="icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </div>
-          <div class="links">
-            <ul class="flex">
-                <li >
-                    <a class="text-dark ff-quick fs-200" href="index.html">Accueil 
-                    </a>
-                <li>
-                    <a class="text-dark ff-quick fs-200" href="#about">A propos
-                    </a>
-                <li>
-                    <a class="text-dark ff-quick fs-200" href="produits.html">Produits
-                    </a>
-                <li class="active">
-                    <a class="text-dark ff-quick fs-200" href="blog.html">blog
-                    </a>
-                <li>
-                    <a class="text-dark ff-quick fs-200" href ="contact.html">Contact
-                    </a>
-            </ul>
-          </div>
-          <div class="icon" id="icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-    </header>
-    <section id="produit-page" class="container">
-        <div class="produit-container">
-            <h1 class="ff-arvo fs-500 text-dark" >Nos<br>Produits</h1>
-            <p class="ff-source-sans fs-200 text-grey text_about">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
+          </header>
+        
+            <div class="scrollable">
+                <section>
+                    <div class="product-text flex">
+                    <h2 class="ff-arvo fs-400 text-dark">Nos Produits</h2>
+                    <p class="ff-source-sans fs-200 text-dark">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est obcaecati, 
+                        nesciunt laboriosam sit, autem velit voluptatem veritatis, ut cumque soluta aliquid. 
+                        Perspiciatis est nostrum repellat rem itaque numquam corrupti cumque!
+                    </p>
+                </div>
+                </section>
+                <section></section>
+                <section>
+                    <div class="prod-container flex">
+                        <img class="img-prod" src="/client/src/projects-images/1.jpg" alt="">
+                        <img class="img-prod" src="/client/src/projects-images/2.jpg" alt="">
+                    </div>
+                </section>
+                <div class="product-1 flex">
+                    <h1 class="ff-arvo fs-500 text-light">Aleo-Vera</h1>
+                </div>
+                <section>
+                    <div class="prod-container flex">
+                        <img class="img-prod" src="/client/src/projects-images/3.jpg" alt="">
+                        <img class="img-prod" src="/client/src/projects-images/4.jpg" alt="">
+                    </div>
+                </section>
+                <section>
+                    <div class="prod-container flex">
+                        <img class="img-prod" src="/client/src/projects-images/5.jpg" alt="">
+                        <img class="img-prod" src="/client/src/projects-images/1.jpg" alt="">
+                    </div>
+                </section>
+                <section></section>
+                <section>
+                    <div class="prod-container flex">
+                        <img class="img-prod" src="/client/src/projects-images/1.jpg" alt="">
+                        <img class="img-prod" src="/client/src/projects-images/2.jpg" alt="">
+                    </div>
+                </section>
+                <div class="product-2 flex">
+                    <h1 class="ff-arvo fs-500 text-dark">Cactus</h1>
+                </div>
+                <section>
+                    <div class="prod-container flex">
+                        <img class="img-prod" src="/client/src/projects-images/3.jpg" alt="">
+                        <img class="img-prod" src="/client/src/projects-images/4.jpg" alt="">
+                    </div>
+                </section>
+                <section>
+                    <div class="prod-container flex">
+                        <img class="img-prod" src="/client/src/projects-images/5.jpg" alt="">
+                        <img class="img-prod" src="/client/src/projects-images/1.jpg" alt="">
+                    </div>
+                </section>
     
         </div>
-        
-        <div class="product-container flex">
-            <ul class="flex products">
-                <li class="product plante_1">
-                    <a class="" href="/aleo-vera">Aleo-vera</a>
-                </li>
-                <li class="product plante_2">
-                    <a class="  ff-arvo fs-500 text-dark" href="/aleo-vera">Cactus</a>
-                </li>
-            </ul>
-            <img class="plante_1_img"src="/client/src/severin-candrian-dgvFsLfIX9E-unsplash.jpg" alt="">
-            <img class="plante_2_img" src="/client/src/plante 1.jpg" alt="">
+        <footer class="footer">
+            <h4 class=" text-footer ff-source-sans fs-100 text-light">Copyright © 2022 All Rights Reserved by Tazuri.</h4>
         </div>
+        </footer>
+        <script src="produits.js"></script>
     </section>
-    <script src="produits.js"></script>
-    <script src="app.js"></script>
-    <footer>
-        <div class="footer grid">
-        <div class="footer-social-icons">
-
-            <ul class="social-icons">
-                <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-                <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
-                <li><a href="" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
-            </ul>
-        </div>
-        <h4 class="ff-source-sans fs-200 text-dark">Copyright © 2022 All Rights Reserved by Tazuri.</h4>
-    </div>
-    </footer>
 </body>
 </html>

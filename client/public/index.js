@@ -71,7 +71,7 @@ const updateImage = index => {
 }
 
 window.addEventListener('scroll', () =>{
-    const scrollTop =html.scrollTop;
+    const scrollTop = html.scrollTop;
     const maxScrollTop = html.scrollHeight - window.innerHeight;
     const scrollFraction = scrollTop / maxScrollTop;
     const frameIndex = Math.min(frameCount -1, Math.floor(scrollFraction * frameCount));
@@ -88,9 +88,6 @@ const preloadImages = () => {
 
 preloadImages();
 
-
-
-
 function loaderSpinner() {
   $(window).load(function() {
       var loader = $('.loader');
@@ -102,7 +99,7 @@ loader.css({
   top: wHeight / 2 - 2.5,
   left: wWidth / 2 - 200
 })
-    
+
 do{
   loader.animate({
     width: i
@@ -119,7 +116,7 @@ if(i === 402){
     height: '100vh'
   })
 }
-    
+
     /* This line hide loader and show content */
     setTimeout(function(){
       $('.content').fadeIn("slow");
